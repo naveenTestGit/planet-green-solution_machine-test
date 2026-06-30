@@ -1,6 +1,13 @@
 import React from 'react';
-import { ProductScreen } from './src/screens/ProductScreen';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import ProductScreen from './src/screen/ProductScreen';
 
-export default function App() {
-  return <ProductScreen />;
-}
+const App = () => {
+  return (
+    <SafeAreaProvider>
+      <ProductScreen />
+    </SafeAreaProvider>
+  );
+};
+
+export default App;
